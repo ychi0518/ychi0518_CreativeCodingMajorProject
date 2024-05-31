@@ -1,5 +1,5 @@
 // wavebrush creates a class of waves
-// Based on the coding train - flocking
+// Based on the coding train - flocking https://thecodingtrain.com/challenges/124-flocking-simulation
 // with a lifespan that will remove and add the wave back in
 // parameters:
 // xPos = x position of valid area
