@@ -2,12 +2,13 @@
 ## Instructions
 
 Use the arrow music to play 4 different type of music sourced from https://pmmusic.pro/.
-the 4 songs are
-Cello Suite No.1 - Bach
-Ride of the Valkyries - Wagner
-Romeo and Juliet Love Theme - Tchaikovsky
-Russian Dance - Tchaikovsky Nutcracker Suite
-Press 
+The 4 songs and the associated arrow keys are:
+|Arrow key|Song - Artist|
+|---------|-------------|
+|LEFT|Cello Suite No.1 - Bach|
+|RIGHT|Ride of the Valkyries - Wagner|
+|DOWN|Romeo and Juliet Love Theme - Tchaikovsky|
+|UP|Russian Dance - Tchaikovsky Nutcracker Suite|
 
 ## Inspirations
 
