@@ -42,6 +42,8 @@ After seeing it run properly I greatly enjoyed the outcome of the individual cod
 
 ## Technical explaination
 
+### Audio Implementation
+
 To implement the code, I utilised a lot of week 11 tutorial content and also additionally used the documentation found on p5.js website.
 
 Firstly make an array for soundfiles and push all the soundfiles into it.
@@ -81,8 +83,11 @@ For the key pressed function, a for loop statement is used to detect if any of t
     }
 ```
 
+I quickly found I could use the different frequenccy fo find the bass, treble and mid using the p5.js documentation
+
 <https://p5js.org/reference/#/p5.FFT>
-I quickly found I could use the different frequenccy fo find the bass, treble and mid.
+
+and implemented the following code:
 
 ``` js
     let spectrum = fft.analyze();
@@ -90,6 +95,28 @@ I quickly found I could use the different frequenccy fo find the bass, treble an
     let bass = fft.getEnergy("bass");
     let mid = fft.getEnergy("mid");
 ```
+
+From that point it was using the values onto objects. For example the building the colour, check the song value and update the colour according to the value:
+
+``` js
+ if(this.songValue==0){
+    building.updateColours(0,mid);
+    
+  } else if 
+  (this.songValue==1){
+    building.updateColours(mid);
+    
+  } else if
+    (this.songValue==2){
+    building.updateColours(0,0,mid);
+  }
+  else if
+    (this.songValue==3){
+    building.updateColours(mid,mid,mid);
+  }
+```
+
+### Visual Implementation
 
 Whilst implementing the group code, I made sure leave in the constructor variables that I would like to change in the artwork so that I did not have to rewrite a majority of the code. Additionally writing any additional methods that would get me for example the updateColours in the building.
 
