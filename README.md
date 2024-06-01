@@ -6,12 +6,12 @@ Run the Live Server and open up the artwork.
 Use the arrow music to play 4 different type of music sourced from <https://pmmusic.pro/>.
 
 The 4 songs and the associated arrow keys are:
-|Arrow key|Song - Artist|
+|Arrow key|Song - *Artist*|
 |---------|-------------|
-|LEFT|Cello Suite No.1 - Bach|
-|RIGHT|Ride of the Valkyries - Wagner|
-|DOWN|Romeo and Juliet Love Theme - Tchaikovsky|
-|UP|Russian Dance Nutcracker Suite - Tchaikovsky |
+|LEFT|Cello Suite No.1 - *Bach*|
+|RIGHT|Ride of the Valkyries - *Wagner*|
+|DOWN|Romeo and Juliet Love Theme - *Tchaikovsky*|
+|UP|Russian Dance Nutcracker Suite - *Tchaikovsky* |
 
 Pressing the enter button would stop the song.
 
@@ -21,21 +21,21 @@ The chosen animation for the individual section is audio which uses the level or
 
 ## Animated Properties
 
-- The velocity of the wave triangles changes depending on the treble of the music.
-- The size of the wave changes depending on the bass of the music.
-- The building changes colour depending on the middle frequency and choice of the song.
-- The water wave changes on the ftt spectrum.
-- Depending on the song, the waves flock or sperate.
-- The frameRate also increases on the treble of the song.
-- The seagulls move across the screen according to the ftt spectrum.
+- The **velocity** of the wave triangles changes depending on the treble of the music.
+- The **size** of the wave changes depending on the bass of the music.
+- The **building** changes colour depending on the middle frequency and choice of the song.
+- The **water wave** changes on the ftt spectrum.
+- Depending on the song, the **flocking behaviour changes**.
+- The **frameRate** also increases on the **treble** of the song.
+- The **seagulls** move across the screen according to the **ftt spectrum**.
 
 ## Inspirations
 
-The last step in the week 11 tutorial inspired me to implement the size alteration in the artwork. The difference is that I wanted to use a different element so I looked into different ways to implementing other parts of the song.
+The last step in the week 11 tutorial inspired me to implement the **size alteration** in the artwork. The difference is that I wanted to use a different element so I looked into different ways to implementing other parts of the song.
 
 Whenever I think of Claude Monet's artworks, classical music comes into mind. So for the artwork, I've implemented classical music. I wanted to have a range of music so I've selected a couple of different songs and use some basic colour to convey the tone. This is why the building changed colour.
 
-The wave-like implementation of the piece was inspired by the artwork cover of the song "Do I Wanna Know" by the Arctic Monkey
+The wave-like implementation of the piece was inspired by the artwork cover of the song "*Do I Wanna Know*" by the Arctic Monkey
 ![Arctic Monkey Music Video](inspirations/ArcticMonkeys.PNG)
 
 While writing the code, I kept thinking which part of the code I could also change without comprising the whole artwork which lead to the movement of the seagull and the frameRate changes.
