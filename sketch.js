@@ -76,7 +76,6 @@ function setup() {
   }
 }
 function keyPressed(){
-  print(soundfiles)
   for(let song of soundfiles){
     console.log(song)
     if(song.isPlaying()){
@@ -107,7 +106,6 @@ function draw() {
   let treble = fft.getEnergy("treble");
   let bass = fft.getEnergy("bass");
   let mid = fft.getEnergy("mid");
-  print(round(treble));
   frameRate(24+round(treble)/255*36);
   gradientSky.display();
   gradientSea.display();
@@ -133,7 +131,7 @@ function draw() {
   for (let wave of waves) {
     wave.edges();
     wave.flock(waves, 1, 0, 1);
-    wave.update(spectrum[1]/255, 2+bass/255*2, 55,0,255);
+    wave.update(treble, 2+bass/255*2, 55,0,255);
     wave.display();
   }
 }
