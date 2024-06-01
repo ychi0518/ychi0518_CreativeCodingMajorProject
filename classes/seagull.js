@@ -8,7 +8,7 @@
 // color = colour of the seagull
 
 class Seagull {
-  constructor(x, y, width,height, size, color) {
+  constructor(x, y, width,height, size, color, counter) {
     //set the X and Y value
     this.x = x;
     this.y = y;
@@ -31,8 +31,10 @@ class Seagull {
     this.wingAngle = 0;
     this.wingSpeed = 0.1;
 
-    this.noiseOffsetX = random(1000); // Offset for Perlin noise in x direction
-    this.noiseOffsetY = random(1000); // Offset for Perlin noise in y direction
+    //Counter in the array;
+    if(counter){
+      this.counter = counter;
+    }
   }
   //this method draw the bird on X and Y position
   display() {
@@ -68,13 +70,22 @@ class Seagull {
     this.wingAngle += this.wingSpeed;
   }
 
-  move() {
-    // Update position using Perlin noise arount the pivot point
-    this.x = this.pivotX + noise(this.noiseOffsetX) * this.width;
-    this.y = this.pivotY + noise(this.noiseOffsetY) * this.height;
+  //move the bird according to the array
+  move(array) {
+    if(array){
+      // Increment the counter
+      if(this.counter < array.length){
+        this.counter++;
+      } else {
+        this.counter = 0;
+      }
+  
+      // Update position
+      this.x = this.pivotX + this.width / array.length * this.counter;
+      this.y = this.pivotY + array[this.counter]/255 * this.height;
 
-    // Increment noise offsets for next frame (slower speed)
-    this.noiseOffsetX += 0.005;
-    this.noiseOffsetY += 0.005;
+    }
+    
+
   }
 }
