@@ -45,6 +45,7 @@ After seeing it run properly I greatly enjoyed the outcome of the individual cod
 To implement the code, I utilised a lot of week 11 tutorial content and also additionally used the documentation found on p5.js website.
 
 Firstly make an array for soundfiles and push all the soundfiles into it.
+
 ``
   soundfiles.push(loadSound('assets/PMM-Bach-Cello-Suite-No.-1-G-Major-MASTER_V1.wav'));
   soundfiles.push(loadSound('assets/PMM-Ride-of-The-Valkyries-MASTER-V1.wav'));
@@ -53,6 +54,7 @@ Firstly make an array for soundfiles and push all the soundfiles into it.
 ``
 
 For the key pressed function, a for loop statement is used to detect if any of the songs is playing and close it before playing the new song. The p5.js Keypressed function and simple if else statements to detect the KeyCode that was pressed. Then I used a variable to keep track what the song is playing.
+
 ``
 function keyPressed(){
   for(let song of soundfiles){
@@ -81,6 +83,7 @@ function keyPressed(){
 
 <https://p5js.org/reference/#/p5.FFT>
 I quickly found I could use the different frequenccy fo find the bass, treble and mid.
+
 ``
   let spectrum = fft.analyze();
   let treble = fft.getEnergy("treble");
@@ -89,6 +92,7 @@ I quickly found I could use the different frequenccy fo find the bass, treble an
 ``
 
 Whilst implementing the group code, I made sure leave in the constructor variables that I would like to change in the artwork so that I did not have to rewrite a majority of the code. Additionally writing any additional methods that would get me for example the updateColours in the building.
+
 ``
   // this methods updates the colours of the building
   updateColours(red, green, blue) {
