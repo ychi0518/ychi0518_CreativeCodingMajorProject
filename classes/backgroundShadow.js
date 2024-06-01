@@ -36,7 +36,7 @@ class BackgroundShadow {
   drawLighthouse() {
 
     // Shape color with the opactiy of the object
-    fill(112, 103, 114,this.opacity); 
+    fill(112, 103, 114, this.opacity);
     beginShape();
     vertex(53, 0);
     vertex(55, 2);

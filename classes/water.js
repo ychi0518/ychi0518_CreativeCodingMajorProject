@@ -1,4 +1,5 @@
-// This class creates the water based on perlin noise wave
+// This class creates the water based on perlin noise wave 
+// based on the p5.js Noise Wave Example:https://p5js.org/examples/math-noise-wave.html
 // parameters:
 // waveHeight1 and waveHeight2 are the y limits of the wave
 class Water {
@@ -6,14 +7,14 @@ class Water {
         // Set the y offset to 0;
         this.yoff = 0;
         // set the waveHeight
-        if(!waveHeight1){
+        if (!waveHeight1) {
             this.waveHeight1 = 60;
         } else {
             this.waveHeight1 = waveHeight1;
         }
-        if(!waveHeight2){
+        if (!waveHeight2) {
             this.waveHeight2 = 100
-        }else{
+        } else {
             this.waveHeight2 = waveHeight2;
         }
     }
@@ -38,7 +39,7 @@ class Water {
         // increment y dimension for noise
         this.yoff += 0.01;
         // close off the shape
-        vertex(width / 2, this.waveHeight1 + (this.waveHeight2-this.waveHeight1)*.25);
+        vertex(width / 2, this.waveHeight1 + (this.waveHeight2 - this.waveHeight1) * .25);
         vertex(width / 2, height);
         vertex(-width / 2, height);
         endShape(CLOSE);

@@ -26,7 +26,7 @@ class Building {
 
     //Move the building to the X and Y position as constructed
     translate(this.xPos, this.yPos);
-    
+
     //Set the colour of the building
     fill(this.red, this.green, this.blue);
 
@@ -95,7 +95,7 @@ class Building {
   //this method creates a reflection that is split into four segments
   reflection(red, green, blue, opacity) {
     push();
-    translate(this.xPos, this.yPos-24);
+    translate(this.xPos, this.yPos - 24);
     scale(this.size, -this.size);
     stroke(red, green, blue, opacity);
     //Draw the base segment
@@ -148,7 +148,7 @@ class Building {
     vertex(-470, -265);
     vertex(-560, -245);
     vertex(-560, -200);
-     //Draw the tower segment
+    //Draw the tower segment
     endShape(CLOSE);
     beginShape();
     vertex(-480, -285);
@@ -171,13 +171,13 @@ class Building {
 
 
   // this methods updates the colours of the building
-  updateColours(red, green, blue) { 
+  updateColours(red, green, blue) {
     this.red = red;
     this.green = green;
     this.blue = blue;
   }
   // this methods updates the size of the building
-  resize(scale) { 
+  resize(scale) {
     this.scale = scale;
   }
 

@@ -67,8 +67,8 @@ function setup() {
 
   // Create all objects: Water, BackgroundShadow, Building, Gradient Wave, Wave Brushes, Seagulls
   water = new Water();
-  seagull1 = new Seagull(-width/2, -300, width,100, 1, color(0));          // Original seagull
-  seagull2 = new Seagull(-width/2, -100, width, 100, 0.7, color(100),55); // Smaller, lighter-colored seagull
+  seagull1 = new Seagull(-width / 2, -300, width, 100, 1, color(0));          // Original seagull
+  seagull2 = new Seagull(-width / 2, -100, width, 100, 0.7, color(100), 55); // Smaller, lighter-colored seagull
   backgroundShadow = new BackgroundShadow(400, -120, 122);
   building = new Building(0, 120, 0, 0, 0);
   gradientWavesSetup();
@@ -146,7 +146,7 @@ function draw() {
   // Display the reflection
   building.reflection(20, 20, 20, 120);
   water.displayMusic(spectrum);
-  
+
   // Display the seagulls
   seagull1.move(spectrum);
   seagull2.move(spectrum);
@@ -160,10 +160,10 @@ function draw() {
     if (this.songValue == 0) {
       wave.flock(waves, 0, 0, 1);
     } else if
-    (this.songValue == 1) {
+      (this.songValue == 1) {
       wave.flock(waves, 1, 0, 1);
     } else if
-    (this.songValue == 2) {
+      (this.songValue == 2) {
       wave.flock(waves, 0, 1, 1);
     } else if
       (this.songValue == 3) {

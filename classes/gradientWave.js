@@ -2,10 +2,10 @@
 class GradientWave {
   constructor(xPos, yPos, w, h, amplitude, yPercent1, yPercent2, color0, color1, color2, color3) {
     // Set the X, Y position
-    this.xPos = xPos; 
+    this.xPos = xPos;
     this.yPos = yPos;
     // Width and height of the gradient background
-    this.w = w; 
+    this.w = w;
     this.h = h;
     // Four main colors, creating three gradient sections
     this.color0 = color0;
@@ -61,7 +61,7 @@ class GradientWave {
         stroke(interColor);
         strokeWeight(100);
         // Use random deviation to create an irregular texture effect
-        ellipse(x + 10 * n3, y + 10 * n4, random(5, 30), random(5, 30)); 
+        ellipse(x + 10 * n3, y + 10 * n4, random(5, 30), random(5, 30));
       }
       // Draw the second gradient section
       for (let y = 0; y < gap2; y += 40) {
