@@ -1,16 +1,10 @@
-let soundfiles = [];
-//Let's make a variate to hold the FFT object
-let fft;
 
-//Let's make a variate for the number of bins in the FFT object
-//This is how many frequency bands we will have
-//The number of bins must be a power of 2 between 16 and 1024 -
-//Try changing this value
+// Array to hold all the soundfiles
+let soundfiles = [];
+let fft;
+// The number of bins that the FTT object will be using
 let numBins = 128;
-//We will also have a variable for the smoothing of the FFT
-//This averages the values of the frequency bands over time so it doesn't jump around too much
-//Smoothing can be a value between 0 and 1
-//try changing this value
+// Smoothing value for the FTT
 let smoothing = 0.8;
 function preload(){
   soundfiles.push(loadSound('assets/PMM-Bach-Cello-Suite-No.-1-G-Major-MASTER_V1.wav'));
@@ -84,19 +78,19 @@ function keyPressed(){
   }
   if(keyCode !== ENTER){
     if (keyCode === LEFT_ARROW) {
-      this.value = 0;
+      this.songValue = 0;
     } else if (keyCode === RIGHT_ARROW) {
-      this.value = 1;
+      this.songValue = 1;
     }
     else if (keyCode === UP_ARROW) {
-      this.value = 2;
+      this.songValue = 2;
     }
     else if (keyCode === DOWN_ARROW) {
-      this.value = 3;
+      this.songValue = 3;
     }
-    analyzer.setInput(soundfiles[value]);
-    soundfiles[this.value].connect(fft);
-    soundfiles[this.value].loop();
+    analyzer.setInput(soundfiles[this.songValue]);
+    soundfiles[this.songValue].connect(fft);
+    soundfiles[this.songValue].loop();
   }
 }
 
@@ -110,19 +104,19 @@ function draw() {
   gradientSky.display();
   gradientSea.display();
   backgroundShadow.display();
-  if(this.value==0){
+  if(this.songValue==0){
     building.updateColours(0,mid);
     
   } else if 
-  (this.value==1){
+  (this.songValue==1){
     building.updateColours(mid);
     
   } else if
-    (this.value==2){
+    (this.songValue==2){
     building.updateColours(0,0,mid);
   }
   else if
-    (this.value==3){
+    (this.songValue==3){
     building.updateColours(mid,mid,mid);
   }
   building.display();
