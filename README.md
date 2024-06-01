@@ -8,7 +8,7 @@ The 4 songs and the associated arrow keys are:
 |LEFT|Cello Suite No.1 - Bach|
 |RIGHT|Ride of the Valkyries - Wagner|
 |DOWN|Romeo and Juliet Love Theme - Tchaikovsky|
-|UP|Russian Dance - Tchaikovsky Nutcracker Suite|
+|UP|Russian Dance Nutcracker Suite - Tchaikovsky |
 
 ## Inspirations
 
