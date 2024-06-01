@@ -47,59 +47,59 @@ To implement the code, I utilised a lot of week 11 tutorial content and also add
 Firstly make an array for soundfiles and push all the soundfiles into it.
 
 ``
-  soundfiles.push(loadSound('assets/PMM-Bach-Cello-Suite-No.-1-G-Major-MASTER_V1.wav'));
-  soundfiles.push(loadSound('assets/PMM-Ride-of-The-Valkyries-MASTER-V1.wav'));
-  soundfiles.push(loadSound('assets/PMM-Russian-Dance-Tchaikovsky-MASTER-V1.wav'));
-  soundfiles.push(loadSound('assets/PMM-Romeo-and-Julliet-MASTER-V1.wav'));
+    soundfiles.push(loadSound('assets/PMM-Bach-Cello-Suite-No.-1-G-Major-MASTER_V1.wav'));
+    soundfiles.push(loadSound('assets/PMM-Ride-of-The-Valkyries-MASTER-V1.wav'));
+    soundfiles.push(loadSound('assets/PMM-Russian-Dance-Tchaikovsky-MASTER-V1.wav'));
+    soundfiles.push(loadSound('assets/PMM-Romeo-and-Julliet-MASTER-V1.wav'));
 ``
 
 For the key pressed function, a for loop statement is used to detect if any of the songs is playing and close it before playing the new song. The p5.js Keypressed function and simple if else statements to detect the KeyCode that was pressed. Then I used a variable to keep track what the song is playing.
 
 ``
-function keyPressed(){
-  for(let song of soundfiles){
-    console.log(song)
-    if(song.isPlaying()){
-      song.stop();
+    function keyPressed(){
+    for(let song of soundfiles){
+        console.log(song)
+        if(song.isPlaying()){
+        song.stop();
+        }
     }
-  }
-  if(keyCode !== ENTER){
-    if (keyCode === LEFT_ARROW) {
-      this.songValue = 0;
-    } else if (keyCode === RIGHT_ARROW) {
-      this.songValue = 1;
+    if(keyCode !== ENTER){
+        if (keyCode === LEFT_ARROW) {
+        this.songValue = 0;
+        } else if (keyCode === RIGHT_ARROW) {
+        this.songValue = 1;
+        }
+        else if (keyCode === UP_ARROW) {
+        this.songValue = 2;
+        }
+        else if (keyCode === DOWN_ARROW) {
+        this.songValue = 3;
+        }
+        analyzer.setInput(soundfiles[this.songValue]);
+        soundfiles[this.songValue].connect(fft);
+        soundfiles[this.songValue].loop();
     }
-    else if (keyCode === UP_ARROW) {
-      this.songValue = 2;
-    }
-    else if (keyCode === DOWN_ARROW) {
-      this.songValue = 3;
-    }
-    analyzer.setInput(soundfiles[this.songValue]);
-    soundfiles[this.songValue].connect(fft);
-    soundfiles[this.songValue].loop();
-  }
 ``
 
 <https://p5js.org/reference/#/p5.FFT>
 I quickly found I could use the different frequenccy fo find the bass, treble and mid.
 
 ``
-  let spectrum = fft.analyze();
-  let treble = fft.getEnergy("treble");
-  let bass = fft.getEnergy("bass");
-  let mid = fft.getEnergy("mid");
+    let spectrum = fft.analyze();
+    let treble = fft.getEnergy("treble");
+    let bass = fft.getEnergy("bass");
+    let mid = fft.getEnergy("mid");
 ``
 
 Whilst implementing the group code, I made sure leave in the constructor variables that I would like to change in the artwork so that I did not have to rewrite a majority of the code. Additionally writing any additional methods that would get me for example the updateColours in the building.
 
 ``
-  // this methods updates the colours of the building
-  updateColours(red, green, blue) {
-    this.red = red;
-    this.green = green;
-    this.blue = blue;
-  }
+    // this methods updates the colours of the building
+    updateColours(red, green, blue) {
+        this.red = red;
+        this.green = green;
+        this.blue = blue;
+    }
 ``
 
 Most of the techniques and coding used in the individual code either comes from the tutorials or my own experience of coding for years.
